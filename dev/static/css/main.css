@@ -608,6 +608,93 @@ p {
   line-height: 1.4;
 }
 
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 140px;
+  height: 180px;
+  margin-bottom: 20px;
+  -webkit-perspective: 700;
+          perspective: 700;
+  cursor: pointer;
+}
+
+.card.flipped .card__item {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card.correct .card__item {
+  -webkit-transition: .6s .5s;
+  transition: .6s .5s;
+  -webkit-transform: scale(0.005);
+          transform: scale(0.005);
+}
+
+.card.dontClick {
+  pointer-events: none;
+}
+
+.card__item {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: #486;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  border-radius: 8px;
+  background: #ccc url(../img/content/rubashka.png) 50% 50% no-repeat;
+  background-size: contain;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 8px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.front {
+  background: url(../img/content/rubashka.png) 50% 50% no-repeat;
+  background-size: contain;
+}
+
+.back {
+  background-color: #C8C8C8;
+  overflow: hidden;
+}
+
+.back img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+}
+
 #field {
   position: relative;
   display: -webkit-box;
@@ -721,91 +808,6 @@ p {
 
 .profile .btn {
   margin: 10px auto;
-}
-
-.card {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 140px;
-  height: 180px;
-  margin-bottom: 20px;
-  -webkit-perspective: 700;
-          perspective: 700;
-  cursor: pointer;
-}
-
-.card.flipped .card__item {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-.card.correct .card__item {
-  -webkit-transition: .6s .5s;
-  transition: .6s .5s;
-  -webkit-transform: scale(0.005);
-          transform: scale(0.005);
-}
-
-.card.dontClick {
-  pointer-events: none;
-}
-
-.card__item {
-  position: relative;
-  display: block;
-  width: 100%;
-  text-align: center;
-  background-color: #486;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  border-radius: 8px;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.front,
-.back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 8px;
-}
-
-.front {
-  background: url(../img/content/rubashka.png) 50% 50% no-repeat;
-  background-size: contain;
-}
-
-.back {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-  background-color: #C8C8C8;
-  overflow: hidden;
-}
-
-.back img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  max-width: 100%;
-  max-height: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
