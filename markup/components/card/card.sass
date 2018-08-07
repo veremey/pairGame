@@ -1,0 +1,55 @@
+
+.card
+	position: relative
+	display: flex
+	width: 140px
+	height: 180px
+	margin-bottom: 20px
+	perspective: 700
+	cursor: pointer
+	&.flipped
+		.card__item
+			transform: rotateY(180deg)
+
+	&.correct
+		.card__item
+			transition: .6s .5s
+			+scale(0.005)
+	&.dontClick
+		pointer-events: none
+	&__item
+		position: relative
+		display: block
+		width: 100%
+		text-align: center
+		background-color: #486
+		backface-visibility: hidden
+		transform-style: preserve-3d
+		border-radius: 8px
+		+tr(.4s )
+
+.front,
+.back
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	display: flex
+	justify-content: center
+	align-items: center
+	border-radius: 8px
+	// backface-visibility: hidden
+
+.front
+	background: url(../img/content/rubashka.png) 50% 50% no-repeat
+	background-size: contain
+
+.back
+	transform: rotateY(180deg)
+	background-color: #C8C8C8
+	overflow: hidden
+	img
+		+vcenter
+		max-width: 100%
+		max-height: 100%

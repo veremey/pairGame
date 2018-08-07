@@ -1,0 +1,71 @@
+
+#field
+	position: relative
+	display: flex
+	align-items: flex-start
+	justify-content: space-between
+	flex-wrap: wrap
+	padding: 20px 20px 0
+	margin: 30px auto
+	border: 2px solid #345
+	background-color: #f3ecec
+	border-radius: 8px
+	+r(768)
+		display: none
+
+#profile
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%) scale(0.0001)
+	transition: .4s
+	&.active
+		display: inline-block
+		position: fixed
+		top: 50%
+		left: 50%
+		right: 0
+		bottom: 0
+		width: 100vw
+		height: 100vh
+		background-color: rgba(0, 0, 0, .4)
+		transform: translate(-50%, -50%) scale(1)
+		z-index: 10
+		transition: .4s 1.5s
+.profile
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	display: flex
+	flex-direction: column
+	width: 96%
+	max-width: 700px
+	height: 94vh
+	background-color: #fff
+	padding: 20px 10px
+	text-align: center
+	margin-bottom: 20px
+	&__pic
+		width: 100%
+		font-size: 0
+		height: 100%
+		margin-bottom: 20px
+		display: flex
+		align-items: center
+		justify-content: center
+		overflow: hidden
+	&__img
+		display: inline-block
+		vertical-align: top
+		max-width: 100%
+	&__info
+		height: 30%
+	&__title
+		font-size: 30px
+	&__desc
+		font-size: 16px
+		padding: 0 20px
+	.btn
+		margin: 10px auto
+
