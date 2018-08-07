@@ -59,7 +59,7 @@ function shuffle(o){
 shuffle(cards);
 
 for (var i = 0; i < cards.length; i++) {
-	var cardContent = '<div class="card__item"><div class="front"></div><div class="back"><img src="../static/img/content/'+cards[i]+'.jpg"> </></div></div>';
+	var cardContent = '<div class="card__item"><div class="front"></div><div class="back"><img src="../img/content/'+cards[i]+'.jpg"> </></div></div>';
   card = document.createElement('div');
   card.dataset.item = cards[i];
   card.dataset.view = "card";
@@ -124,7 +124,7 @@ var show = function(dataItem) {
 	var card;
 	var profile = document.getElementById('profile');
 
-	var cardContent = '<div class="profile__pic"><img class="profile__img"  src="../static/img/content/'+dataItem+'.jpg" > </></div><div class="profile__info"><h3 class="profile__title">'+ data[dataItem].title +'</h3><p class="profile__desc"> '+ data[dataItem].desc +'  </p></div><div class="center"><button class="btn js-close">ДАЛЕЕ</button></div>';
+	var cardContent = '<div class="profile__pic"><img class="profile__img"  src="../img/content/'+dataItem+'.jpg" > </></div><div class="profile__info"><h3 class="profile__title">'+ data[dataItem].title +'</h3><p class="profile__desc"> '+ data[dataItem].desc +'  </p></div><div class="center"><button class="btn js-close">ДАЛЕЕ</button></div>';
 
 	card = document.createElement('div');
   card.classList.add('profile');
