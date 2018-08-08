@@ -59,7 +59,7 @@ function shuffle(o){
 shuffle(cards);
 
 for (var i = 0; i < cards.length; i++) {
-	var cardContent = '<div class="card__item"><div class="front"></div><div class="back"><img src="static/img/content/'+cards[i]+'.jpg"> </></div></div>';
+	var cardContent = '<div class="card__item"><div class="front"><img src="static/img/content/rubashka.png" alt=""></div><div class="back"><img src="static/img/content/'+cards[i]+'.jpg"> </></div></div>';
   card = document.createElement('div');
   card.dataset.item = cards[i];
   card.dataset.view = "card";

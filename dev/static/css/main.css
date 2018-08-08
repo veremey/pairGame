@@ -523,21 +523,16 @@ p {
   margin: 0;
 }
 
-#error {
-  display: none;
-  margin-top: 40px;
-}
-
-@media only screen and (max-width: 768px) {
-  #error {
-    display: block;
-  }
-}
-
 #layout {
   width: 660px;
   max-width: 100%;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+  #layout {
+    padding: 0 10px;
+  }
 }
 
 .startscreen {
@@ -615,12 +610,17 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 140px;
-  height: 180px;
   margin-bottom: 20px;
   -webkit-perspective: 700px;
           perspective: 700px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    width: 23%;
+    margin-bottom: 10px;
+  }
 }
 
 .card.flipped .card__item {
@@ -642,27 +642,21 @@ p {
 .card__item {
   position: relative;
   display: block;
-  width: 100%;
   text-align: center;
   background-color: #486;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   border-radius: 8px;
-  background: #ccc url(../img/content/rubashka.png) 50% 50% no-repeat;
-  background-size: contain;
   -webkit-transform: translate3d(0, 0, 0) rotateY(0deg);
           transform: translate3d(0, 0, 0) rotateY(0deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 .front,
 .back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -680,13 +674,22 @@ p {
 }
 
 .front {
-  background: url(../img/content/rubashka.png) 50% 50% no-repeat;
-  background-size: contain;
   -webkit-transform: translate3d(0, 0, 0) rotateY(0deg);
           transform: translate3d(0, 0, 0) rotateY(0deg);
 }
 
+.front img {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+}
+
 .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: #C8C8C8;
   overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0) rotateY(180deg);
@@ -725,7 +728,7 @@ p {
 
 @media only screen and (max-width: 768px) {
   #field {
-    display: none;
+    padding: 20px 10px 0;
   }
 }
 
