@@ -648,8 +648,6 @@ p {
   border-radius: 8px;
   background: #ccc url(../img/content/rubashka.png) 50% 50% no-repeat;
   background-size: contain;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -671,18 +669,28 @@ p {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 8px;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
 }
 
 .front {
   background: url(../img/content/rubashka.png) 50% 50% no-repeat;
   background-size: contain;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
 }
 
 .back {
   background-color: #C8C8C8;
   overflow: hidden;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 .back img {

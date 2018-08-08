@@ -23,12 +23,11 @@
 		width: 100%
 		text-align: center
 		background-color: #486
-		// backface-visibility: hidden
 		transform-style: preserve-3d
 		border-radius: 8px
 		background: #ccc url(../img/content/rubashka.png) 50% 50% no-repeat
 		background-size: contain
-		backface-visibility: hidden
+		// backface-visibility: hidden //test hid
 		+tr(.4s )
 
 .front,
@@ -42,7 +41,6 @@
 	justify-content: center
 	align-items: center
 	border-radius: 8px
-	transform: rotateY(180deg)
 
 
 
@@ -50,11 +48,16 @@
 .front
 	background: url(../img/content/rubashka.png) 50% 50% no-repeat
 	background-size: contain
-	// backface-visibility: hidden
+	backface-visibility: hidden //test add
+	transform-style: preserve-3d //test add
+	transform: rotateY(0deg)//test add
 
 .back
 	background-color: #C8C8C8
 	overflow: hidden
+	transform: rotateY(180deg)//test add
+	backface-visibility: hidden //test add
+	transform-style: preserve-3d //test add
 	img
 		+vcenter
 		max-width: 100%
