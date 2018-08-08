@@ -471,6 +471,8 @@ html ::-moz-selection {
 
 html, body {
   height: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -616,14 +618,14 @@ p {
   width: 140px;
   height: 180px;
   margin-bottom: 20px;
-  -webkit-perspective: 700;
-          perspective: 700;
+  -webkit-perspective: 700px;
+          perspective: 700px;
   cursor: pointer;
 }
 
 .card.flipped .card__item {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  -webkit-transform: translate3d(0, 0, 0) rotateY(180deg);
+          transform: translate3d(0, 0, 0) rotateY(180deg);
 }
 
 .card.correct .card__item {
@@ -648,6 +650,8 @@ p {
   border-radius: 8px;
   background: #ccc url(../img/content/rubashka.png) 50% 50% no-repeat;
   background-size: contain;
+  -webkit-transform: translate3d(0, 0, 0) rotateY(0deg);
+          transform: translate3d(0, 0, 0) rotateY(0deg);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -669,28 +673,24 @@ p {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 8px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 .front {
   background: url(../img/content/rubashka.png) 50% 50% no-repeat;
   background-size: contain;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
+  -webkit-transform: translate3d(0, 0, 0) rotateY(0deg);
+          transform: translate3d(0, 0, 0) rotateY(0deg);
 }
 
 .back {
   background-color: #C8C8C8;
   overflow: hidden;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  -webkit-transform: translate3d(0, 0, 0) rotateY(180deg);
+          transform: translate3d(0, 0, 0) rotateY(180deg);
 }
 
 .back img {
