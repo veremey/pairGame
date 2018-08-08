@@ -648,6 +648,8 @@ p {
   border-radius: 8px;
   background: #ccc url(../img/content/rubashka.png) 50% 50% no-repeat;
   background-size: contain;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -671,8 +673,6 @@ p {
   border-radius: 8px;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
 }
 
 .front {
