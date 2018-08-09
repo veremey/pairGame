@@ -15,7 +15,4 @@ __pages: [{
              },{
                 name: 'index',
                 href: 'index.html'
-             },{
-                name: 'win',
-                href: 'win.html'
              }]
