@@ -2,8 +2,6 @@
 .card
 	position: relative
 	display: flex
-	// width: 140px
-	// height: 180px
 	margin-bottom: 20px
 	perspective: 700px
 	cursor: pointer
@@ -12,11 +10,8 @@
 		margin-bottom: 10px
 	&.flipped
 		.card__item
-			transform: translate3d(0, 0, 0) rotateY(180deg)//test hide
-		// .front
-		// 	transform: rotateY(180deg)//test add
-		// .back
-		// 	transform: rotateY(0deg)//test add
+			transform: translate3d(0, 0, 0) rotateY(180deg)
+
 
 	&.correct
 		.card__item
@@ -29,37 +24,27 @@
 		display: block
 		// width: 100%
 		text-align: center
-		background-color: #486
+		// background-color: #486
+		background-color: transparent
 		transform-style: preserve-3d
 		border-radius: 8px
-		// background: #ccc url(../img/content/rubashka.png) 50% 50% no-repeat
-		// background-size: contain
+
 		transform: translate3d(0, 0, 0) rotateY(0deg)
 		backface-visibility: hidden //test hid
 		+tr(.4s ) //test hid
 
 .front,
 .back
-	// position: absolute
-	// top: 0
-	// left: 0
-	// right: 0
-	// bottom: 0
 	display: flex
 	justify-content: center
 	align-items: center
 	border-radius: 8px
-	backface-visibility: hidden //test add
-	transform-style: preserve-3d //test add
-	// +tr(.4s )
-
-
+	backface-visibility: hidden
+	transform-style: preserve-3d
 
 
 .front
-	// background: url(../img/content/rubashka.png) 50% 50% no-repeat
-	// background-size: contain
-	transform: translate3d(0, 0, 0) rotateY(0deg)//test add
+	transform: translate3d(0, 0, 0) rotateY(0deg)
 	img
 		display: inline-block
 		vertical-align: top
@@ -73,7 +58,7 @@
 	bottom: 0
 	background-color: #C8C8C8
 	overflow: hidden
-	transform: translate3d(0, 0, 0) rotateY(180deg)//test add
+	transform: translate3d(0, 0, 0) rotateY(180deg)
 	img
 		+vcenter
 		max-width: 100%

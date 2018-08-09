@@ -142,19 +142,19 @@ var show = function(dataItem) {
 
 }
 
-var winText = '<div class="win"><div class="win__wrap"><h3 class="win__title">Поздравляем!</h3><p class="win__desc"> Теперь вы знаете всех основных владельцев молдавских телеканалов.Ну или почти всех. Например, телеканалом Pro TV владеет офшорная компания CME Media Enterprises, 75% которой принадлежит американскому медиаконгломерату AT&amp;T, а остальные акции находятся на бирже и их владельцы могут постоянно меняться.</p><p class="win__desc">Ну, и, наверное, все знают, что телеканалы Moldova 1 и Moldova 2 — общественные и финансируются из денег налогоплательщиков.</p></div></div>'
 
 
 var win = function () {
+  var winDiv = document.getElementById('win');
   var field = document.getElementById('field');
-  var layout = document.getElementById('layout');
 
   var allCards = document.getElementsByClassName('card').length;
   var allReversedCards = document.getElementsByClassName('correct').length;
 
   if(allCards === allReversedCards) {
     clearInterval(Interval);
-    layout.innerHTML = winText;
+    field.classList.add('is-hidden');
+    winDiv.classList.add('is-active');
 
   }
 

@@ -524,14 +524,23 @@ p {
 }
 
 #layout {
+  height: 100%;
+  position: relative;
   width: 660px;
   max-width: 100%;
   margin: 0 auto;
+  padding-top: 30px;
 }
 
 @media only screen and (max-width: 768px) {
   #layout {
-    padding: 0 10px;
+    padding: 20px 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #layout {
+    min-height: 810px;
   }
 }
 
@@ -586,6 +595,7 @@ p {
 }
 
 .win {
+  display: none;
   max-width: 600px;
   width: 96%;
   margin: 20px auto;
@@ -593,6 +603,10 @@ p {
   border-radius: 10px;
   border: 2px solid red;
   text-align: center;
+}
+
+.win.is-active {
+  display: block;
 }
 
 .win__title {
@@ -603,6 +617,13 @@ p {
 .win__desc {
   font-size: 18px;
   line-height: 1.4;
+}
+
+.social-likes {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
 }
 
 .card {
@@ -643,7 +664,7 @@ p {
   position: relative;
   display: block;
   text-align: center;
-  background-color: #486;
+  background-color: transparent;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   border-radius: 8px;
@@ -720,7 +741,7 @@ p {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 20px 20px 0;
-  margin: 30px auto;
+  margin: 0px auto 30px;
   border: 2px solid #345;
   background-color: #f3ecec;
   border-radius: 8px;
@@ -751,13 +772,21 @@ p {
   bottom: 0;
   width: 100vw;
   min-height: 100vh;
-  height: 800px;
+  height: 810px;
   background-color: rgba(0, 0, 0, 0.4);
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
   z-index: 10;
   -webkit-transition: .4s 1.5s;
   transition: .4s 1.5s;
+}
+
+@media only screen and (max-width: 400px) {
+  #profile.active {
+    height: auto;
+    min-height: 800px;
+    padding-top: 20px;
+  }
 }
 
 .profile {
@@ -776,11 +805,17 @@ p {
   width: 96%;
   max-width: 700px;
   min-height: 94vh;
-  height: 600px;
+  height: 700px;
   background-color: #fff;
   padding: 20px 10px;
   text-align: center;
   margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 400px) {
+  .profile {
+    height: auto;
+  }
 }
 
 .profile__pic {
