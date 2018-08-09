@@ -147,12 +147,14 @@ var show = function(dataItem) {
 var win = function () {
   var winDiv = document.getElementById('win');
   var field = document.getElementById('field');
+  var layout = document.getElementById('layout');
 
   var allCards = document.getElementsByClassName('card').length;
   var allReversedCards = document.getElementsByClassName('correct').length;
 
   if(allCards === allReversedCards) {
     clearInterval(Interval);
+    layout.classList.add('is-hidden');
     field.classList.add('is-hidden');
     winDiv.classList.add('is-active');
 

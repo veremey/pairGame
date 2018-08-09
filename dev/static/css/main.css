@@ -544,6 +544,10 @@ p {
   }
 }
 
+#layout.is-hidden {
+  display: none;
+}
+
 .startscreen {
   position: absolute;
   top: 50%;
@@ -747,6 +751,10 @@ p {
   border-radius: 8px;
 }
 
+#field.is-hidden {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
   #field {
     padding: 20px 10px 0;
@@ -784,7 +792,7 @@ p {
 @media only screen and (max-width: 400px) {
   #profile.active {
     height: auto;
-    min-height: 800px;
+    min-height: 810px;
     padding-top: 20px;
   }
 }
@@ -815,6 +823,9 @@ p {
 @media only screen and (max-width: 400px) {
   .profile {
     height: auto;
+    top: 2%;
+    -webkit-transform: translate(-50%, 0%) scale(1);
+            transform: translate(-50%, 0%) scale(1);
   }
 }
 

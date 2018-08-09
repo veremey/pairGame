@@ -11,7 +11,7 @@
 	background-color: #f3ecec
 	border-radius: 8px
 	&.is-hidden
-		flex-direction
+		display: none
 	+r(768)
 		padding: 20px 10px 0
 
@@ -37,8 +37,9 @@
 		transition: .4s 1.5s
 		+r(400)
 			height: auto
-			min-height: 800px
+			min-height: 810px
 			padding-top: 20px
+
 
 .profile
 	position: absolute
@@ -57,6 +58,8 @@
 	margin-bottom: 20px
 	+r(400)
 		height: auto
+		top: 2%
+		transform: translate(-50%, 0%) scale(1)
 
 	&__pic
 		width: 100%
